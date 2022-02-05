@@ -1,0 +1,154 @@
+\documentclass[]{article}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+
+%\usepackage{amsfonts}
+%\usepackage{amssymb}
+%\usepackage{graphicx}
+
+\begin{document}
+	
+	
+\title{Esqueleto para verificación de programas con ciclos en latex}
+	
+\author{Jorge Duitama}
+	
+\maketitle
+
+\section*{Programa a verificar}
+
+Escribir el programa, función o procedimiento en el siguiente entorno lstlisting.
+Utilzar el símbolo \$ para incluir símbolos matemáticos
+
+\begin{lstlisting}[language=GCL, mathescape, tabsize=4]
+
+
+\end{lstlisting}
+
+\section*{Paso 1}
+$\{Q\}INIC\{P\}$
+
+\begin{proof}
+
+Si INIC es un programa complejo, se recomienda comenzar escribiendo la tripla a probar
+
+\begin{lstlisting}[language=GCL, mathescape, tabsize=4]
+{$Q$}
+INIC
+{$P$}
+\end{lstlisting}
+
+Y realizar la prueba a continuación
+
+\begin{align*}
+ & \\
+\equiv &<\text{}> \\
+ & \\
+\equiv &<\text{}> \\
+ & \\
+\equiv &<\text{}> \\
+ & 
+\end{align*}
+\end{proof}
+
+\section*{Paso 2}
+$P \wedge \neg BC \implies R$
+
+\begin{proof}
+\begin{align*}
+& \\
+\equiv &<\text{}> \\
+& \\
+\equiv &<\text{}> \\
+& \\
+\equiv &<\text{}> \\
+&
+\end{align*}
+\end{proof}
+
+
+\section*{Paso 3}
+$\{P \wedge BC\}SC\{P\}$ 
+\begin{proof}
+
+Se recomienda comenzar escribiendo la tripla a probar
+
+\begin{lstlisting}[language=GCL, mathescape, tabsize=4]
+{$P \wedge BC$}
+SC
+{$P$}
+\end{lstlisting}
+
+Y realizar la prueba a continuación
+
+\begin{align*}
+& \\
+\equiv &<\text{}> \\
+& \\
+\equiv &<\text{}> \\
+& \\
+\equiv &<\text{}> \\
+& 
+\end{align*}
+
+Si la prueba es compleja se puede hacer en varias partes
+
+\begin{align*}
+& \\
+\equiv &<\text{}> \\
+& \\
+\equiv &<\text{}> \\
+& \\
+\equiv &<\text{}> \\
+&
+\end{align*}
+
+\end{proof}
+
+\section*{Paso 4}
+$P \wedge BC \implies t>0$
+\begin{proof}
+
+
+Se debe definir la función de cota t
+
+\begin{align*}
+& \\
+\equiv &<\text{}> \\
+& \\
+\equiv &<\text{}> \\
+& \\
+\equiv &<\text{}> \\
+&
+\end{align*}
+\end{proof}
+
+\section*{Paso 5}
+$\{P \wedge BC \wedge t=C\}SC\{t<C\}$
+\begin{proof}
+
+Se recomienda comenzar escribiendo la tripla a probar, de acuerdo con la cota definida en el paso anterior
+
+\begin{lstlisting}[language=GCL, mathescape, tabsize=4]
+{$P \wedge BC \wedge t=C$}
+SC
+{$t<C$}
+\end{lstlisting}
+
+Y realizar la prueba a continuación
+
+\begin{align*}
+& \\
+\equiv &<\text{}> \\
+& \\
+\equiv &<\text{}> \\
+& \\
+\equiv &<\text{}> \\
+& 
+\end{align*}
+
+\end{proof}
+	
+\end{document}

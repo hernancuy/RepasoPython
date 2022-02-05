@@ -1,0 +1,56 @@
+\documentclass[]{article}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+
+\begin{document}
+	
+	
+\title{Esqueleto en LaTeX para análisis de complejidad}
+	
+\author{Jorge Duitama}
+	
+\maketitle
+
+\section*{Programa a analizar}
+
+Escribir el programa, función o procedimiento en el siguiente entorno lstlisting.
+Utilzar el símbolo \$ para incluir símbolos matemáticos
+
+\begin{lstlisting}[language=GCL, mathescape, tabsize=4]
+
+
+\end{lstlisting}
+
+\section*{Derivación de fórmula}
+La siguiente tabla resume las operaciones que se ejecutan y la cantidad de veces que se ejecuta cada una:
+
+\begin{table}[h!]
+\begin{center}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Operación(es)} & \textbf{Constante} & \textbf{Veces que se ejecuta} \\
+\hline
+Asignación ($:=$) & $c_1$ & $ $ \\
+Suma, Resta ($+,-$) & $c_2$ & $ $ \\
+Mult., Div., Módulo  ($*,/,mod$) & $c_3$ & $ $ \\
+Comparación ($<,>,\leq,\geq,=,\neq$) & $c_4$ & $ $ \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\section*{Solucion de ecuación de recurrencia}
+En caso de que el análisis de complejidad llegue a una ecuación de recurrencia, resolver esta ecuación. Se puede utilizar el entorno align para organizar manipulación de ecuaciones
+
+
+\begin{align*}
+ &=  \\	
+ &=  \\
+ &= \\
+ &= \\
+& 
+\end{align*}
+
+\end{document}
