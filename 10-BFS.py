@@ -1,7 +1,8 @@
 """
 - Busqueda por expansion
 
-Tambien llamada busqueda por anchura o BFS(Breath First Search). Esta busqueda comienza por la raiz y se explora por todos los nodos vecinos de este y a continuacion se realiza lo mismo con cada uno de los nodos vecinos hasta recorrer toda la grafica
+Tambien llamada busqueda por anchura o BFS(Breath First Search). 
+Esta busqueda comienza por la raiz y se explora por todos los nodos vecinos de este y a continuacion se realiza lo mismo con cada uno de los nodos vecinos hasta recorrer toda la grafica
 
 - Complejidad
 
