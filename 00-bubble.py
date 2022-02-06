@@ -1,6 +1,18 @@
 """
-BubbleSort(list[]):
-  n = longitud de lista - 1
+
+- BubbleSort: 
+
+Algoritmo de ordenamiento mas simple funciona intercambiando repetidamente los elementos de una lista de numeros si se encuentra en un orden incorrecto
+
+- Complejidad: 
+
+Para tres casos es O(n^2)
+
+- Pseudocodigo :
+
+
+BubbleSort(lista[]):
+  n = longitud(lista) - 1
   Para i = 1 hasta n:
     Para j = 0 hasta n - 1:
       Si(lista[j] > lista[j+1]):
