@@ -23,8 +23,6 @@ Si se una cola de prioridad: O[|V| log|V| + |E|]
 
 # Clase parar definir vertice
 
-from lib2to3.pytree import Node
-
 
 class Vertice:
     #constructor
