@@ -1,15 +1,10 @@
 """
 - Dijkstra
-
 Creado por Edsger Dijkstra en 1956. Este algoritmo resuelve el problema de la ruta mas corta para una grafica con pesos no negativos en sus aristas
-
 - Complejidad
-
 La complejidad es de O[|V|^2+|E|]
 Si se una cola de prioridad: O[|V| log|V| + |E|]
-
 - Pseudocodigo
-
 1. Asignar al nodo inicial una distancia tentativa de 0 y el resto el valor 'infinito'; asignar tambien predecesor nulo para todos.
 2. Establecer al nodo inicial como nodo actual y crear un conjunto de nodos no visitados con todos los nodos.
 3. Mientras el conjunto de nodos no visitados está vacío:
@@ -17,8 +12,6 @@ Si se una cola de prioridad: O[|V| log|V| + |E|]
     a. Si la distancia del nodo u sumada con el peso doble Bes menor a la distancia del nodo V,actualizar la distancia de v guardar a u como predecesor de v.
 5. Cuando se han revisado todos los vecinos de u coma se marca como visitado y se elimina del conjunto no visitado.
 6. Seleccionar el no no visitado con menor distancia tentativa y marcarlo como nuevo nodo actual. Regresar al paso 3
-
-
 """
 
 # Clase parar definir vertice
@@ -54,7 +47,7 @@ class Grafica:
 
     def imprimirGrafica(self):
         for v in self.vertices:
-            print("La distancia del vertices "+str(v)+" es "+str(self.vertices[v].distancia)+" llegando desde "+ str(self.vertices[v].padre))
+            print("La distancia del vertices "+ str(v)+ " es " +str(self.vertices[v].distancia)+ " llegando desde "+ str(self.vertices[v].padre))
 
     def camino(self, a, b):
         camino = [] 
@@ -100,34 +93,3 @@ class Grafica:
                 actual = self.minimo(noVisitados)
         else:
             return False
-
-def main():
-    
-    #define el grafo
-    g = Grafica()
-
-    # Crea los vertices
-    g.agregaVertice(1)
-    g.agregaVertice(2)
-    g.agregaVertice(3)
-    g.agregaVertice(4)
-    g.agregaVertice(5)
-    g.agregaVertice(6)
-
-    g.agregarArista(1, 6, 14)
-    g.agregarArista(1, 2, 7)
-    g.agregarArista(1, 3, 9)
-    g.agregarArista(2, 3, 10)
-    g.agregarArista(2, 4, 15)
-    g.agregarArista(3, 4, 11)
-    g.agregarArista(3, 6, 2)
-    g.agregarArista(4, 5, 6)
-    g.agregarArista(5, 6, 9)
-    
-    print("\n\n La ruta más rapida por Dijkstra junto con su costo es: ")
-    g.dijkstra(1)
-    print(g.camino(1, 6))
-    print("\n Los valores finales de la grafica son los siguientes:")
-    g.imprimirGrafica()
-
-main()
