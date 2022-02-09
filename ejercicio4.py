@@ -1,5 +1,5 @@
 
-import dijstka
+import dijkstra
 import csv
 
 def ciudad(ciudades, busqueda):
@@ -25,10 +25,10 @@ def main():
     print("\n\n")
 
     #define el grafo
-    g = dijstka.Grafica()
+    g = dijkstra.Grafica()
 
     # Cargue archivo aeropuertos https://es.wikipedia.org/wiki/Anexo:Aeropuertos_seg%C3%BAn_el_c%C3%B3digo_IATA      
-    with open("ciudades.csv", "r", encoding="utf-8") as csv_file:
+    with open("aeropuertos.csv", "r", encoding="utf-8") as csv_file:
         csv_reader_ciudades = csv.reader(csv_file, delimiter=';')    
         ciudades = list(csv_reader_ciudades)
         for row in ciudades:
@@ -52,18 +52,18 @@ def main():
     destination = input("Ingrese el nombre de la ciudad destino: ")
     ciudadDestino = ciudad(ciudades, destination)
     
-    print("\n Su viaje será desde el " +str(ciudadOrigen[0][1])+ "ubicado en la ciudad de " + str(ciudadOrigen[0][2]) + "/"+str(ciudadOrigen[0][3])+" \nhasta el " +str(ciudadDestino[0][1])+ "en ciudad de " +str(ciudadDestino[0][2])+ "/"+str(ciudadOrigen[0][3])+". ")
+    print("\nSu viaje será desde el " +str(ciudadOrigen[0][1])+ " ubicado en la ciudad de " + str(ciudadOrigen[0][2]) + "/"+str(ciudadOrigen[0][3])+" \nhasta el " +str(ciudadDestino[0][1])+ " en ciudad de " +str(ciudadDestino[0][2])+ "/"+str(ciudadOrigen[0][3])+". ")
  
     #Respuesta final
-    print("\n\n La ruta más rapida por Dijkstra junto con su costo es: ")
+    print("\n\nLa ruta más rapida por Dijkstra junto con su costo es: ")
 
     #Nodo inicial
     g.dijkstra(ciudadOrigen[0][0])
     
     #Camino total
 
-    total = g.camino(ciudadOrigen[0][0], ciudadDestino[0][0])
-    print(total[0])
+    ruta = g.camino(ciudadOrigen[0][0], ciudadDestino[0][0])
+    print(ruta)
     #Impresion de la grafica opcional
     #print("\n Los valores finales de la grafica son los siguientes:")
     #g.imprimirGrafica()
